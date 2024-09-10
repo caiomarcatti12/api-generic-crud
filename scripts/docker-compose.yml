@@ -1,0 +1,13 @@
+services:
+  api-generic-crud:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: codelesshub/api-generic-crud:dev
+    container_name: api-generic-crud
+    tty: true
+    ports:
+      - "8080:8080"
+      - "4000:4000"
+    volumes:
+      - ../:/app
